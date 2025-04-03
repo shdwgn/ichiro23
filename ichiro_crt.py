@@ -558,7 +558,7 @@ logo=("""
 ll=str([hari,tanggal])
 hx=("""  [bold green1]DEVELOPER[medium_purple1]   ⟩[cyan][bold] Ichiro 
   [bold green1]FACEBOOK[medium_purple1]    ⟩[cyan][bold] ICHIRO MIYAZATO 
-  [bold green1]WIFE[medium_purple1]      ⟩[cyan][bold] JANNA SAMSON
+  [bold green1]WIFE[medium_purple1]        ⟩[cyan][bold] JANNA SAMSON
   [bold green1]STATUS[medium_purple1]      ⟩[bright_yellow] ALL NETWORK 
   [bold green1]TOOLS[medium_purple1]       ⟩[bright_yellow] PREMIUM/PAID
   [bold green1]UPDATES[medium_purple1]     ⟩[bright_yellow] MARCH 22

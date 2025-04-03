@@ -1,4 +1,4 @@
-#CODE BY Sythe
+#CODE BY ICHIRO
 import requests
 import re
 import os
@@ -201,10 +201,10 @@ def jovan():
            ██╔══██║██║░░██║██║╚██╔╝██║██║██║╚████║░╚═══██╗
            ██║░░██║██████╔╝██║░╚═╝░██║██║██║░╚███║██████╔╝
           ╚═╝░░╚═╝╚═════╝░╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═════╝░
-                 {white} https://exoboost.site
+                 {white} https://facebook.com/myztknz
      {red}──────────────────────────────────────────────────────────────────────\033[0m
-     {red}OWNER     {white}: {yellow} Frack  
-     {red}FACEBOOK  {white}: {yellow} None
+     {red}OWNER     {white}: {yellow} ICHIRO  
+     {red}WIFE      {white}: {yellow} JANNA
      {red}──────────────────────────────────────────────────────────────────────\033[0m""")
 
 import os

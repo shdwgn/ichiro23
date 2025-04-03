@@ -202,8 +202,8 @@ def approval():
                              ██╗██╗██╗██╗
                              ╚═╝╚═╝╚═╝╚═╝
 
-          {white}  OWNER      :  S Y T H E
-          {white}  TOOL       :  \x1b[1;31m  APPROVAL-SYSTEM
+          {white}  OWNER      :  I C H I R O
+          {white}  WIFE       :  J A N N A
            {white} VERSION    :  {yellow} 7.0
 
 \x1b[1;37m                  KEY   :  {key}
@@ -249,10 +249,10 @@ def jovan():
            ██╔══██║██║░░██║██║╚██╔╝██║██║██║╚████║░╚═══██╗
            ██║░░██║██████╔╝██║░╚═╝░██║██║██║░╚███║██████╔╝
           ╚═╝░░╚═╝╚═════╝░╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═════╝░
-                 {white} https://exoboost.site
+                 {white} https://shdwgn.site
      {red}──────────────────────────────────────────────────────────────────────\033[0m
-     {red}OWNER     {white}: {yellow} Frack  
-     {red}FACEBOOK  {white}: {yellow} None
+     {red}OWNER     {white}: {yellow} Ichiro  
+     {red}WIFE  {white}: {yellow} Janna
      {red}──────────────────────────────────────────────────────────────────────\033[0m""")
 
 import os

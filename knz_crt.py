@@ -841,7 +841,7 @@ def menu():
     	first_name=input('\033[1;37mFIRST NAME : ')
     	last_name=input('\033[1;37mLAST NAME  : ')
     banner()
-  print(Panel(f" [bold green] IF NO RESULT ON/OFF AIRPLANE MODE OR VPN 1.1.1.1",style="bold violet"))
+    print(Panel(f" [bold green] IF NO RESULT ON/OFF AIRPLANE MODE OR VPN 1.1.1.1",style="bold violet"))
     for _ in range(num_accounts):
         progres(_+1, num_accounts, delay)
         print()

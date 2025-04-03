@@ -921,7 +921,7 @@ def register_facebook_account(password, first_name, last_name, birthday):
                 open("/sdcard/AUTO-CREATE-BRYX/create/auto-create-alive.txt", "a").write(id+"|"+code+f"|{password}|"+email+"|"+token+"\n")
             else:
                 print()
-              else:
+    else:
         open("/sdcard/AUTO-CREATE-BRYX/create/auto-create-disabled-cp.txt", "a").write(f"{email}|{id}|BRYXPOGIJOKER123\n")
         cps.append(id)
 #──────────────{ AUTO PHOTO }──────────────#

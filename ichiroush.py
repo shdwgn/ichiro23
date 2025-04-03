@@ -5318,9 +5318,9 @@ def jovan():
 {gh5}│                                                                     {gh5}     │
 {gh6}╰──────────────────────────────────────────────────────────────────────────╯
 {gh4} ╭────────{gh}TOOL INFORMATION{gh4}─────────╮ {gh4}   ╭────────{gh2}USER INFORMATION{gh4}─────────╮
-{gh4} │ {red}•{hotpink} OWNER   : {h}Y U S H         {gh4}    │   {gh4} │ {red}• {hotpink}STATUS   : {h}ACTIVE        {gh4}     │
-{gh5} │{red} • {hotpink}USES    : {h}BOOSTING       {gh5}     │ {gh5}   │ {red}• {hotpink}COUNTRY  :{h} PHILIPPINES    {gh5}    │
- {gh5}│{red} • {hotpink}NETWORK : {h}ALL NETWORK     {gh5}    │   {gh5} │ {red}• {hotpink}TELEGRAM : {h}@SYTHE13         {gh6}  │
+{gh4} │ {red}•{hotpink} OWNER   : {h}ICHIRO          {gh4}    │   {gh4} │ {red}• {hotpink}STATUS   : {h}ACTIVE        {gh4}     │
+{gh5} │{red} • {hotpink}WIFE    : {h}JANNA       {gh5}     │ {gh5}   │ {red}• {hotpink}COUNTRY  :{h} PHILIPPINES    {gh5}    │
+ {gh5}│{red} • {hotpink}NETWORK : {h}ALL NETWORK     {gh5}    │   {gh5} │ {red}• {hotpink}USES : {h}SHARE        {gh6}  │
 {gh6} │ {red}• {hotpink}VERSION : {h}7.0      {gh6}           │{gh5}    │ {red}• {hotpink}TOOLS    : {h}PREMIUM SHARE{gh6}      │
 {gh6} ╰─────────────────────────────────╯    ╰─────────────────────────────────╯""")
 purple = "\033[1;35m"

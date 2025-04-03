@@ -556,11 +556,11 @@ logo=("""
           [green_yellow]THIS [dark_olive_gre]TOOLS [pale_green1] IS[dark_sea_green…] NOT FOR FREE
 """)
 ll=str([hari,tanggal])
-hx=("""  [bold green1]DEVELOPER[medium_purple1]   ⟩[cyan][bold] Deen
-  [bold green1]FACEBOOK[medium_purple1]    ⟩[cyan][bold] DEEN ABUEVA
-  [bold green1]GITHUB[medium_purple1]      ⟩[bright_yellow] Dian2025.git
+hx=("""  [bold green1]DEVELOPER[medium_purple1]   ⟩[cyan][bold] Ichiro 
+  [bold green1]FACEBOOK[medium_purple1]    ⟩[cyan][bold] ICHIRO MIYAZATO 
+  [bold green1]WIFE[medium_purple1]      ⟩[cyan][bold] JANNA SAMSON
   [bold green1]STATUS[medium_purple1]      ⟩[bright_yellow] ALL NETWORK 
-  [bold green1]TOOLS[medium_purple1]       ⟩[bright_yellow] PREMIUM 
+  [bold green1]TOOLS[medium_purple1]       ⟩[bright_yellow] PREMIUM/PAID
   [bold green1]UPDATES[medium_purple1]     ⟩[bright_yellow] MARCH 22
   [bold green1]TODAY DATE[medium_purple1]  ⟩ [cyan]"""+ll)
 def banner():
@@ -811,7 +811,7 @@ def confirm_id(mail,uid,otp,data,ses):
 #──────────────{ PROGRES }──────────────#
 def progres(current, num_accounts, delay):
 		for sleep in range(int(num_accounts), 0, -1):
-			print(f'[YUSH]-[{current}|{num_accounts}]-[SUCCESS:-{len(oks)}|BAD:-{len(cps)}]',end='\r')
+			print(f'[ICHIRO]-[{current}|{num_accounts}]-[SUCCESS:-{len(oks)}|BAD:-{len(cps)}]',end='\r')
 			time.sleep(1)
 			if current == num_accounts:
 				break

@@ -1,4 +1,4 @@
-#CODE BY Sythe
+#CODE BY ICHIRO
 import requests
 import re
 import os

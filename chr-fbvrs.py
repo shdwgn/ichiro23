@@ -1,4 +1,4 @@
-#code write by : bryx
+#code write by : ichiro
 #http://alexraefra.com/mailbox
 import os
 
@@ -569,9 +569,9 @@ logo=("""
           [green_yellow]THIS [dark_olive_gre]TOOL[pale_green1] IS[dark_sea_green…] NOT FOR FREE
 """)
 ll=str([hari,tanggal])
-hx=(f"""  [bold green_yellow]DEVELOPER[medium_purple1]   ⟩ [bold red] Sythe
-  [bold red]FACEBOOK[medium_purple1]    ⟩ [bold cyan1] Yush Huilen
-  [bold red]STATUS[medium_purple1]      ⟩ [bold cyan1]ACTIVE until feb 28, 2025
+hx=(f"""  [bold green_yellow]DEVELOPER[medium_purple1]   ⟩ [bold red] Ichiro
+  [bold red]FACEBOOK[medium_purple1]    ⟩ [bold cyan1] ICHIRO MIYAZATO
+  [bold red]STATUS[medium_purple1]      ⟩ [bold cyan1]ACTIVE until feb 28, 2026
   [bold red]TOOL[medium_purple1]        ⟩ [bold cyan1]Paided
   [bold red]TODAY DATE[medium_purple1]  ⟩ [bold cyan1]{ll}""")
 
@@ -651,7 +651,7 @@ def fake_name():
 
 def get_temp_plus():
 	name = " ".join(fake_name()).replace(' ', '')
-	domain = random.choice(['fexbox.org','fexpost.com','fextemp.com','chitthi.in'])
+	domain = random.choice(['knz-mail.cfd','dfshdow.site','fextemp.com','harakirimail.com'])
 	email = f'{name}{str(random.randrange(1000,10000))}@{domain}'
 	return email
 

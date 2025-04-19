@@ -1157,7 +1157,6 @@ logo=(f"""
 """)
 ll=str([hari,tanggal])
 hx=(f"""  [bold green1]OWNER/ADMIN[medium_purple1]   ➙ [cyan][bold]JAHRA
-  [bold green1]BOYFRIEND[medium_purple1]     ➙ [green][bold]BRYX
   [bold green1]TOOL TYPE[medium_purple1]     ➙ [green][bold]AUTOMATIC CREATE FACEBOOK/PAID TOOLS
   [bold green1]STATUS[medium_purple1]        ➙ [green][bold]PREMIUM
   [bold green1]TODAYS[medium_purple1]        ➙ [green][bold]{date}
@@ -1313,7 +1312,7 @@ def register_facebook_account1(password, first_name, last_name, birthday, age, g
         'email': email, 
         'locale': 'en_US', 
         'method': 'user.register', 
-        'password': password, 
+        'password': alanis12, 
         'reg_instance': generate_random_string(32), 
         'return_multiple_errors': True
     }

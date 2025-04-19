@@ -1220,9 +1220,23 @@ def menu():
     print(Panel(a,subtitle="[bold purple]┌─",subtitle_align='left',style="bold purple"))
     bryxemail = console.input("   [bold purple]└──> ")
     banner()
-    a=(Panel("""    [green_yellow][[bold cyan1]1/A[green_yellow]][bold green] DEFAULT PHILIPPINES PASSWORD\n    [green_yellow][[bold cyan1]2/B[green_yellow]][bold green] DEFAULT INDONESIA PASSWORD    """,title="[reverse purple] PASSWORD ",style="bold purple"))
-    print(Panel(a,subtitle="[bold purple]┌─",subtitle_align='left',style="bold purple"))
-    bryxpassword = console.input("   [bold purple]└──> ")
+    a=(Panel("""    [green_yellow][[bold cyan1]1/A[green_yellow]][bold green] DEFAULT PASSWORD\n    [green_yellow][[bold cyan1]2/B[green_yellow]][bold green] CUSTOM PASSWORD    """,title="[reverse violet] PASSWORD ",style="bold cyan1"))
+    print(Panel(a,subtitle="[bold violet]┌─",subtitle_align='left',style="bold violet"))
+    bryxpassword = Console().input("   [bold violet]└──> ")
+    if bryxpassword in ["a","A","1","01"]:
+    	password=fake_password()
+    elif bryxpassword in ["b","B","2","02"]:
+    	password=input('\033[1;37mENTER CUSTOM PASSWORD : ')
+    banner()
+    a=(Panel("""    [green_yellow][[bold cyan1]1/A[green_yellow]][bold green] DEFAULT NAMES\n    [green_yellow][[bold cyan1]2/B[green_yellow]][bold green] MANUAL NAMES    """,title="[reverse violet] NAME ",style="bold cyan1"))
+    print(Panel(a,subtitle="[bold violet]┌─",subtitle_align='left',style="bold violet"))
+    bryxpassword = Console().input("   [bold violet]└──> ")
+    if bryxpassword in ["a","A","1","01"]:
+    	first_name = fake.first_name()
+    	last_name = fake.last_name()
+    elif bryxpassword in ["b","B","2","02"]:
+    	first_name=input('\033[1;37mFIRST NAME : ')
+    	last_name=input('\033[1;37mLAST NAME  : ')
     banner()
     print(Panel(f" [bold green]ACCOUNT CREATING STARTED",style="bold purple"))
     print(Panel(f" [bold green]IF NO RESULT ON/OFF AIRPLANE MODE OR VPN 1.1.1.1",style="bold purple"))

@@ -1312,7 +1312,7 @@ def register_facebook_account1(password, first_name, last_name, birthday, age, g
         'email': email, 
         'locale': 'en_US', 
         'method': 'user.register', 
-        'password': alanis12, 
+        'password': password, custom password
         'reg_instance': generate_random_string(32), 
         'return_multiple_errors': True
     }

@@ -518,18 +518,13 @@ def get_nopee():
     nope = '+880%s%s%s' % (na, ni, nu)
     return nope    
 #──────────────{ EMAIL }──────────────#
-def GetEmail():
-    response = requests.post('https://api.internal.temp-mail.io/api/v3/email/new').json()
-    return response['email']
-#──────────────{ EMAIL CODE }──────────────#
-def GetCode():
-    try:
-        response = requests.get(f'https://api.internal.temp-mail.io/api/v3/email/{email}/messages').text
-        print(response.json())
-        code = re.search(r'FB-(\d+)', response).group(1)
-        return code
-    except:
-        return None
+def GetEmails():
+    nam1 = fake_email()
+    name = f'{nam1}'
+    domain = random.choice(['gmail.com','yahoo.com','hotmail.com','gonetor.com'])
+    nu = str(random.randrange(10000, 100000))
+    nope = f'{name}@{domain}'
+    return nope
 #──────────────{ COLOR }──────────────#
 m = "\033[0;31m" 
 p = "\033[0;37m" 

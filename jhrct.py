@@ -1765,7 +1765,7 @@ def register_facebook_account4(password, first_name, last_name, birthday, age, g
     else:
         cps.append(id)
 #──────────────{ AUTO CREATE METHOD 5 }──────────────#
-def register_facebook_account(password, first_name, last_name, birthday):
+def register_facebook_account5(password, first_name, last_name, birthday):
     session = requests.Session()
     api_key = '882a8490361da98702bf97a021ddc14d'
     secret = '62f8ce9f74b12f84c123cc23437a4a32'

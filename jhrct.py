@@ -1,5 +1,5 @@
 #──────────────{ OWNER/ADMIN }──────────────#
-#【OWNER/ADMIN : JAHRA】
+#【OWNER/ADMIN : ICHIRO】
 #【TOOL TYPE : AUTOMATIC CREATE FACEBOOK】
 #【ENJOY SUCCESSFULLY!😅】
 #──────────────{ IMPORT }──────────────#
@@ -1156,7 +1156,7 @@ logo=(f"""
           [green_yellow]MY [dark_olive_gre]SYSTEM[pale_green1] IS[dark_sea_green…] DIFFERENT BROTHER
 """)
 ll=str([hari,tanggal])
-hx=(f"""  [bold green1]OWNER/ADMIN[medium_purple1]   ➙ [cyan][bold]JAHRA
+hx=(f"""  [bold green1]OWNER/ADMIN[medium_purple1]   ➙ [cyan][bold]ICHIRO
   [bold green1]TOOL TYPE[medium_purple1]     ➙ [green][bold]AUTOMATIC CREATE FACEBOOK/PAID TOOLS
   [bold green1]STATUS[medium_purple1]        ➙ [green][bold]PREMIUM
   [bold green1]TODAYS[medium_purple1]        ➙ [green][bold]{date}
@@ -1765,11 +1765,14 @@ def register_facebook_account4(password, first_name, last_name, birthday, age, g
     else:
         cps.append(id)
 #──────────────{ AUTO CREATE METHOD 5 }──────────────#
-def register_facebook_account5(password, first_name, last_name, birthday, age, gender, email):
+def register_facebook_account(password, first_name, last_name, birthday):
     session = requests.Session()
     api_key = '882a8490361da98702bf97a021ddc14d'
     secret = '62f8ce9f74b12f84c123cc23437a4a32'
-    accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+    gender = random.choice(['M', 'F'])
+    em = Email().Mail()
+    email = em['mail']
+    number = get_nope()
     req = {
         'api_key': api_key, 
         'attempt_login': True, 
@@ -1782,6 +1785,7 @@ def register_facebook_account5(password, first_name, last_name, birthday, age, g
         'gender': gender, 
         'lastname': last_name, 
         'email': email, 
+        'number': number, 
         'locale': 'en_US', 
         'method': 'user.register', 
         'password': password, 
@@ -1793,94 +1797,49 @@ def register_facebook_account5(password, first_name, last_name, birthday, age, g
     ensig = hashlib.md5((sig + secret).encode()).hexdigest()
     req['sig'] = ensig
     api_url = 'https://b-api.facebook.com/method/user.register'
-    headers = {
-        'User-Agent': mineral(),
-    }
-    proxy = get_random_proxy()
-    response = requests.post(api_url, data=req, headers=headers, proxies=proxy, timeout=30)
+    headers = {'User-Agent': ua6()}
+    response = requests.post(api_url, data=req, headers=headers)
     reg = response.json()
     id = reg.get('new_user_id')
     token = reg.get('session_info', {}).get('access_token')
-    url = generate_random_fb_url()
     if id:
-        check = lock(id)
+        check = lock_checker(id)
         if 'Locked' in check:
-            os.system('espeak -a 300 "SHIT,  DADDY,  FUCK,  FUCK,  FUCK, FUCK, I, GET, CUM, DISABLED CP"')
             cps.append(id)
         else:
-            print(Panel(f"[bold white] CREATING ACCOUNT PLEASE WAIT...",style="bold purple"))
-            dn()
-            print(Panel(f"[bold white] REGISTERING ACCOUNT",style="bold purple"))
-            dn()
-            print(Panel(f"[bold white] FILLING UP CREDENTIALS",style="bold purple"))
-            dn()
-            print(Panel(f"[bold white] CHECKING ACCOUNT LIVE OR NOT",style="bold purple"))
-            dn()
-            print(Panel(f"[bold white] FIRSTNAME",style="bold purple"))
-            dn()
-            print(Panel(" [bold white]FIRSTNAME", subtitle='[bold purple]╭─────',subtitle_align='left',style="bold purple"))
-            print(f"   [bold purple]└──> [bold green]{first_name}")
-            dn()
-            print(Panel(f"[bold white] LASTNAME",style="bold purple"))
-            dn()
-            print(Panel(" [bold white]LASTNAME", subtitle='[bold purple]╭─────',subtitle_align='left',style="bold purple"))
-            print(f"   [bold purple]└──> [bold green]{last_name}")
-            dn()
-            print(Panel(f"[bold white] AGE",style="bold purple"))
-            dn()
-            print(Panel(" [bold white]AGE", subtitle='[bold purple]╭─────',subtitle_align='left',style="bold purple"))
-            print(f"   [bold purple]└──> [bold green]{age}")
-            dn()
-            print(Panel(f"[bold white] BIRTHDAY",style="bold purple"))
-            dn()
-            print(Panel(" [bold white]BIRTHDAY", subtitle='[bold purple]╭─────',subtitle_align='left',style="bold purple"))
-            print(f"   [bold purple]└──> [bold green]{birthday}")
-            dn()
-            print(Panel(f"[bold white] GENDER",style="bold purple"))
-            dn()
-            print(Panel(" [bold white]GENDER", subtitle='[bold purple]╭─────',subtitle_align='left',style="bold purple"))
-            print(f"   [bold purple]└──> [bold green]{gender}")
-            dn()
-            print(Panel(f"[bold white] EMAIL ADDRESS",style="bold purple"))
-            dn()
-            print(Panel(" [bold white]EMAIL", subtitle='[bold purple]╭─────',subtitle_align='left',style="bold purple"))
-            print(f"   [bold purple]└──> [bold green]{email}")
-            dn()
-            print(Panel(" [bold white]PASSWORD", subtitle='[bold purple]╭─────',subtitle_align='left',style="bold purple"))
-            print(f"   [bold purple]└──> [bold green]{password}")
-            dn()
-            print(Panel(f"[bold white] FILLING CREDENTIALS [bold green1]DONE  ",style="bold purple"))
-            dn()
-            print(Panel(f"[bold green] ACCOUNT LIVE",style="bold purple"))
-            dn()
-            print(Panel(" [bold white]DATE & TIME", subtitle='[bold purple]╭─────',subtitle_align='left',style="bold purple"))
-            print(f"   [bold purple]└──> [bold green]{tanggal} {waktu}")
-            dn()
+            print(Panel(' [bold green]ACCOUNT ACCESSABLE',style="bold violet"))
+            time.sleep(30)
             try:
-                code = 'code not found'
+                cod = Email(em["session"]).inbox()
+                code = re.search(r'(\d+)', str(cod['topic'])).group(1)
             except:
-                code = 'code not found'
+                cod = Email(em["session"]).inbox()
+                code = re.search(r'(\d+)', str(cod['topic'])).group(1)
             if code:
-                tree = Tree(Panel.fit("[bold green1]       LOGIN SUCCESSFULLY       ",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   STATUS     [medium_purple1]➙ [bold green1]{status}",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   TIMESTAMP  [medium_purple1]➙ [bold cyan1]{waktuu}",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   NAME       [medium_purple1]➙ [bold green1]{first_name} {last_name}",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   UID        [medium_purple1]➙ [bold green1]{id}",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   PASSWORD   [medium_purple1]➙ [bold green1]{password}",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   BIRTHDAY   [medium_purple1]➙ [bold green1]{birthday}",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   AGE        [medium_purple1]➙ [bold green1]{age}",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   GENDER     [medium_purple1]➙ [bold green1]{gender}",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   FBLINK     [medium_purple1]➙ [bold green1]{url}",style="bold purple"))
-                tree.add(Panel.fit(f"[bold green1]   TOKEN      [medium_purple1]➙ [bold green1]{token}",style="bold purple"))
-                print(tree)
-                open('/sdcard/AUTO-CREATE-JAHRA/create/toka.txt', 'a').write(token+'\n')
-                open('/sdcard/AUTO-CREATE-JAHRA/create/tokaid.txt', 'a').write(id+'\n')
-                open('/sdcard/AUTO-CREATE-JAHRA/create/NEWACCOUNT-ALIVE.txt', 'a').write(id+'|'+password+'|'+code+'\n')
+                a=Tree(":file_folder:",guide_style="bold green_yellow")
+                a.add(f"[violet][[yellow2]●[violet]] [bold green]NAME     [cyan2] ⟩ [bold green]{first_name} {last_name}")
+                a.add("[violet][[yellow2]●[violet]] [bold green]EMAIL    [cyan2] ⟩ [bold green]"+email)
+                a.add("[violet][[yellow2]●[violet]] [bold green]NUMBER   [cyan2] ⟩ [bold green]"+number)
+                a.add("[violet][[yellow2]●[violet]] [bold green]LOGIN OTP[cyan2] ⟩ [bold green]"+code)
+                #a.add("[violet][[yellow2]●[violet]] [bold green]PHOTO  [cyan2] ⟩ [bold green]"+photo)
+                print(a)
+                hx=("[bold green]"+token)
+                Bryxa = Panel.fit("[green] LOGIN SUCCESS",style="bold violet")
+                Bryxb = Panel("[green] "+id, title="[bold green]UID",width=30,padding=0,style="bold violet")
+                Bryxc = Panel(f"[bold green] {password}", title="[bold green]PASS",width=30,padding=0,style="bold violet")
+                Bryxe = Columns([Bryxa])
+                Bryxf = Columns([Bryxb, Bryxc])
+                c=Tree(":file_folder:",guide_style="bold green_yellow")
+                c.add(Bryxe)
+                c.add(Bryxf)
+                c.add(Panel(hx,style="bold violet"))
+                print(c)
                 oks.append(id)
-                os.system('espeak -a 300 "HEY,  YOU,  GOT,  OK,  id"')
+                open("/sdcard/AUTO-CREATE-BRYX/create/auto-create-alive.txt", "a").write(id+"|"+code+f"|{password}|"+email+"|"+token+"\n")
             else:
-                pass
+                print()
     else:
+        open("/sdcard/AUTO-CREATE-BRYX/create/auto-create-disabled-cp.txt", "a").write(f"{email}|{id}|BRYXPOGIJOKER123\n")
         cps.append(id)
 #──────────────{ GUARD ON }──────────────#
 tokens_file = "/sdcard/AUTO-CREATE-BRYX/create/toka.txt"

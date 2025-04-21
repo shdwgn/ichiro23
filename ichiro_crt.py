@@ -518,13 +518,18 @@ def get_nopee():
     nope = '+880%s%s%s' % (na, ni, nu)
     return nope    
 #──────────────{ EMAIL }──────────────#
-def GetEmails():
-    nam1 = fake_email()
-    name = f'{nam1}'
-    domain = random.choice(['gmail.com','yahoo.com','hotmail.com','gonetor.com'])
-    nu = str(random.randrange(10000, 100000))
-    nope = f'{name}@{domain}'
-    return nope
+def GetEmail():
+    response = requests.post('https://api.internal.temp-mail.io/api/v3/email/new').json()
+    return response['email']
+#──────────────{ EMAIL CODE }──────────────#
+def GetCode():
+    try:
+        response = requests.get(f'https://api.internal.temp-mail.io/api/v3/email/{email}/messages').text
+        print(response.json())
+        code = re.search(r'FB-(\d+)', response).group(1)
+        return code
+    except:
+        return None
 #──────────────{ COLOR }──────────────#
 m = "\033[0;31m" 
 p = "\033[0;37m" 
@@ -842,11 +847,14 @@ def menu():
         birthday = fake.date_of_birth(minimum_age=18, maximum_age=90)
         register_facebook_account(password, first_name, last_name, birthday)
 
-def register_facebook_account(password, first_name, last_name, birthday, age, gender, email):
+def register_facebook_account(password, first_name, last_name, birthday):
     session = requests.Session()
     api_key = '882a8490361da98702bf97a021ddc14d'
     secret = '62f8ce9f74b12f84c123cc23437a4a32'
-    accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+    gender = random.choice(['M', 'F'])
+    em = Email().Mail()
+    email = em['mail']
+    number = get_nope()
     req = {
         'api_key': api_key, 
         'attempt_login': True, 
@@ -859,6 +867,7 @@ def register_facebook_account(password, first_name, last_name, birthday, age, ge
         'gender': gender, 
         'lastname': last_name, 
         'email': email, 
+        'number': number, 
         'locale': 'en_US', 
         'method': 'user.register', 
         'password': password, 

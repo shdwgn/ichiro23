@@ -842,14 +842,11 @@ def menu():
         birthday = fake.date_of_birth(minimum_age=18, maximum_age=90)
         register_facebook_account(password, first_name, last_name, birthday)
 
-def register_facebook_account(password, first_name, last_name, birthday):
+def register_facebook_account(password, first_name, last_name, birthday, age, gender, email):
     session = requests.Session()
     api_key = '882a8490361da98702bf97a021ddc14d'
     secret = '62f8ce9f74b12f84c123cc23437a4a32'
-    gender = random.choice(['M', 'F'])
-    em = Email().Mail()
-    email = em['mail']
-    number = get_nope()
+    accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
     req = {
         'api_key': api_key, 
         'attempt_login': True, 
@@ -862,7 +859,6 @@ def register_facebook_account(password, first_name, last_name, birthday):
         'gender': gender, 
         'lastname': last_name, 
         'email': email, 
-        'number': number, 
         'locale': 'en_US', 
         'method': 'user.register', 
         'password': password, 

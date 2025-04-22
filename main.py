@@ -9,12 +9,6 @@ import hashlib
 import subprocess
 
 
-os.system('git pull --quiet 2>/dev/null')
-os.system("clear")
-print('\033[97;1m [•]ᴬᴰᴰ ᴹᴱ ᴼᴺ ᵀᴱᴸᴱᴳᴿᴬᴹ _ᵀ‧ᴹᴱ/FbCreator19000')
-os.system('xdg-open https://t.me/FbCreator19000')
-tokyo=platform.architecture()[0]
-
 print(f"""
     
 
@@ -47,12 +41,6 @@ def main():
     else:
         print("NO LESS THAN 9 OR MORE THAN 10 PER PROCESS!! . Access denied.")
         
-# Format the date and time
-formatted_date_time = now.strftime("%Y-%m-%d %H:%M:%S")
-
-# Print the date and time
-print("Current Date and Time:", formatted_date_time)
-
 
 if __name__ == "__main__":
     main()

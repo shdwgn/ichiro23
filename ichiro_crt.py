@@ -9,7 +9,7 @@ import hashlib
 import faker,fake_email,random
 from faker import Faker
 from fake_email import Email
-import { MailSlurp } from 'mailslurp-client';
+import mailslurp_client
 from bs4 import BeautifulSoup
 try:
     import rich, requests

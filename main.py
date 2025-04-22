@@ -24,9 +24,9 @@ print(f"""
 ▀▄▄▄▀▀▀▄▄▄▄▀▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▀▄▄▄▀▀▄▄▄▄▀▄▄▀▄▄▀▄▄▄▀▄▄▄▄▀▄▄▄▄▀▄▄▄▄▀▄▄▄▄▀
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓           
-> › Github :- https://github.com/Yname000p/FbCreator1900.git
+> › Owner : ICHIRO
 > › To Get Full Version :
-> › Contact Me: t.me/FbCreator19000
+> › Contact Me: Ichiro Miyazato 
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛                       """)
 print('\x1b[38;5;208m⇼'*60)
 
@@ -46,10 +46,7 @@ def main():
         subprocess.run(["python", "                                                                                                                                            ..py"])
     else:
         print("NO LESS THAN 9 OR MORE THAN 10 PER PROCESS!! . Access denied.")
-
-# Get the current date and time
-now = datetime.datetime.now()
-
+        
 # Format the date and time
 formatted_date_time = now.strftime("%Y-%m-%d %H:%M:%S")
 

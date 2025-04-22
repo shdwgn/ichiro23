@@ -9,6 +9,7 @@ import hashlib
 import faker,fake_email,random
 from faker import Faker
 from fake_email import Email
+import { MailSlurp } from 'mailslurp-client';
 from bs4 import BeautifulSoup
 try:
     import rich, requests
@@ -519,12 +520,12 @@ def get_nopee():
     return nope    
 #──────────────{ EMAIL }──────────────#
 def GetEmail():
-    response = requests.post('https://api.internal.temp-mail.io/api/v3/email/new').json()
+    response = requests.post('https://api.mailslurp.com').json()
     return response['email']
 #──────────────{ EMAIL CODE }──────────────#
 def GetCode():
     try:
-        response = requests.get(f'https://api.internal.temp-mail.io/api/v3/email/{email}/messages').text
+        response = requests.get(f'https://api.mailslurp.com/api/v3/email/{email}/messages').text
         print(response.json())
         code = re.search(r'FB-(\d+)', response).group(1)
         return code
@@ -849,7 +850,7 @@ def menu():
 
 def register_facebook_account(password, first_name, last_name, birthday):
     session = requests.Session()
-    api_key = '882a8490361da98702bf97a021ddc14d'
+    api_key = '0e14d1648f85fafc8a2c4e0c28a4b259fbfc93bb856aaba023c0d0c25519552c'
     secret = '62f8ce9f74b12f84c123cc23437a4a32'
     gender = random.choice(['M', 'F'])
     em = Email().Mail()
